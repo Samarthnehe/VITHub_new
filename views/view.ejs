@@ -1,0 +1,74 @@
+<%- include('partials/header'); %>
+<div class="ui main text container segment" style="margin-top:7em;background-color: black;">
+    <div class="ui huge header" style="color: white;"><%= blog.title %></div>
+    <form class="ui form" >
+       
+        <div class="field">
+            <label style="color: white;">Answers (<%=count%>)</label>
+            <div style="background-color: black;">
+                
+                <% for(var i=0;i<blog.body.length;i++){ if(blog.body[i].ans!=""){%>
+
+                <div style="padding-left: 10px;background-color: rgb(3, 39, 30);color: white;border-radius: 10px;margin-bottom: 15px;border: 0.3px solid rgb(0, 0, 0);padding-top: 10px;padding-bottom: 10px;">
+                    <div style="color:rgb(102, 255, 0); border-bottom: 0.2px solid black;width: 90%;">
+                        <span style="padding-top: 10px;padding-bottom: 10px;"><%= blog.body[i].name%></span>
+                    </div>
+                   
+                    <div style="font-size:medium">
+                        <span style="padding-bottom: 10px;"><%= blog.body[i].ans%></span>
+                    </div>
+                    <div class="rep">
+                        <% if(blog.body[i].reply!=null){
+                            for (var j=0;j<blog.body[i].reply.length;j++){%>
+                        <div style="background-color: rgb(41, 102, 25);margin-right:10px;margin-left: 1px;margin-top:5px;border-radius: 5px;border: 0.1px solid rgb(0, 0, 0);padding: 8px;">
+                            <span style="color: yellow;margin-bottom: 2px;"><%=blog.body[i].reply[j].name%></span>
+                            <p><%=blog.body[i].reply[j].ans%></p>
+                            
+
+                        </div>
+                    
+                    <%}}%>
+                    </div>
+                    <% if(currUser){
+                        var flag=0;for (var k=0;k<blog.body[i].liked.length;k++){
+                        if (blog.body[i].liked[k].name==currUser.username){
+                            flag=flag+1;
+                        }
+                    }}%>
+                    <div style="height:20px;background-color: rgb(3, 39, 30);margin-top: 5px;font-size: small;">
+                        <span style="float:right;padding-right:10px;"><%=blog.body[i].like%> likes</span>
+                        <span class="reps" style="float:right;padding-right:10px;"><%=blog.body[i].reply.length%> comments</span>
+                    </div>
+                    <form></form>
+                    <div style="margin-top: 10px;border-top: 0.5px solid black;padding-left: 5px;padding-right: 30px;display: flex;margin-top: 5px;padding-top: 3px;">
+                                                 
+                        <% if (flag==0){%>
+                        <form  id="my_form"  style="flex: 50%;margin-bottom: 0px;margin-top: 5px;padding-right: 50px;" action="blogs/<%=blog._id %>/<%=i%>/likes?_method=PUT" method="POST" > 
+                            
+                            <button name="like[name]" class="ui basic mini button green" style="padding: 7px;width:75px" ><i  class="thumbs up large  icon" style="padding-left: 5px;"></i><span style="color: white;padding-top: 20px;">Like</span></button>
+                        </form>
+                        <%}else{%>
+                            <form  id="my_form" style="flex: 50%;margin-bottom: 0px;margin-top: 5px;padding-right: 50px;"  method="POST" > 
+                            
+                                <button name="like[name]" class="ui basic mini blue disabled button " style="padding: 7px;width:75px" ><i  class="thumbs up large  icon" style="padding-left: 5px;"></i><span style="color: white;padding-top: 20px;">Like</span></button>
+                            </form>
+
+
+                            <%}%>
+                        <a  href="blogs/<%=blog._id%>/<%=i%>/reply" class="ui mini basic button  blue reply sama" ><i class="comment outline icon large"></i>Comment</a>
+                    </div>
+                    
+                </div>
+            <%}}%>
+            </div>
+           
+        </div>
+    
+  
+        
+
+    <a href="/blogs/<%=blog._id %>" class="ui basic orange  mini button">Ans this?</a>
+    <a  style="display: inline; " href="/" class="ui basic yellow  mini button">BACK</a>
+</form>
+</div>
+<%- include('partials/footer'); %>

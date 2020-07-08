@@ -1,0 +1,121 @@
+<%- include('partials/header'); %>
+
+    <div class="col heya" >
+        <div class="hey1">
+        <div class="top">
+            <h1 style="text-align: center;"><u>TOPICS</u></h1>
+        </div>
+        <div class="topics">
+            <div class="points">
+                <ul style="list-style-type:none;" class="list">
+                    <li><a href="/blogs/academics"><i class="pencil alternate small icon"></i>Academics</a></li>
+                    <li><a href="/blogs/hostel"><i class="home small icon"></i>Hostel</a></li>
+                    <li><a href="/blogs/mess"><i class="Food small icon"></i>Mess</a></li>
+                    <li><a href="/blogs/roomallotment"><i class="bed small icon"></i>Room Allotment</a></li>
+                    <li><a href="/blogs/books"><i class="Book small icon"></i>Books</a></li>
+                    <li><a href="/blogs/projects"><i class="Text File small icon"></i>Projects</a></li>
+                    <li><a href="/blogs/faculty"><i class="male small icon"></i>Faculty</a></li>
+                    <li><a href="/blogs/subjects"><i class="clipboard outline small icon"></i>Subjects</a></li>
+                    <li><a href="/blogs/ffcs"><i class="Desktop small icon"></i>FFCS</a></li>
+                    <li><a href="/blogs/transport"><i class="car small icon"></i>Transport</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="col hi" >
+        
+        <div class="ui main text " >
+        <div class="ui huge header heya" >Posts</div>
+        <div class="ui top attached segment" style="background-color: #24244e;border: 1px solid #24244e;">
+            <div class="ui items">
+                <% blogs.forEach(function(blog){ if(blog.title!=null ) {
+                    %>
+                    <div class="item sam">
+                        
+                        <div class="content" style="color: white;">
+                            <div class="meta" style="margin-right: 10px;margin-top: 10px;margin-bottom: 10px;">
+                                <div class="tooltip" style="font-size:small;color: rgb(252, 255, 102);"><i class="user circle small icon"></i><%= blog.name %><span class="tooltiptext" style="visibility: hidden;width: 120px;background-color: rgb(0, 0, 0);color: rgb(115, 255, 0);text-align: center;border-radius: 6px;padding: 5px 0;position: absolute;z-index: 1;">HEYA</span><span style="color: white;font-size: small;">- <%= blog.created.toDateString() %></span></div>
+                            </div>
+                            <a class="header" href="/blogs/<%= blog._id %>" style="color: rgb(16, 188, 240);margin-top: 5px;margin-bottom: 10px;"><%= blog.title %></a>
+                            <div>
+                                 <% if( blog.body[0]!=null ){
+                                     if(blog.body[0].ans!=""){%>
+                                    <div >
+                                        <div class="meta" style="border: 0.5px solid rgb(0, 0, 0); margin-top: 10px;color: rgb(255, 255, 255);background-color:rgb(3, 39, 30);height: auto;margin-bottom: 10px;padding-top: 15px;padding-bottom: 15px;padding-left: 10px;border-radius: 10px;padding-right: 5px;">
+                                            <div style="margin-bottom: 10px;width: 60%;">
+                                                <snap  style=" color: rgb(102, 255, 0);padding-bottom: 5px;border-bottom: 0.2px solid black;width: 60%;"><%= blog.body[0].name%></span>
+                                                
+                                            </div>
+                                            <div style="padding-top: 5px;">
+                                                <span style="font-size: medium;"><%= blog.body[0].ans %></span> 
+                                            </div>
+                                            <div class="rep">
+                                                <% if(blog.body[0].reply!=null){
+                                                    for (var i=0;i<blog.body[0].reply.length;i++){%>
+                                                <div style="background-color: rgb(41, 102, 25);margin-right:10px;margin-left: 1px;margin-top:5px;border-radius: 5px;border: 0.1px solid rgb(0, 0, 0);padding: 8px;">
+                                                    <span style="color: yellow;margin-bottom: 2px;"><%=blog.body[0].reply[i].name%></span>
+                                                    <p><%=blog.body[0].reply[i].ans%></p>
+                                                    
+
+                                                </div>
+                                            
+                                            <%}}%>
+                                            </div>
+                                            <% if(currUser){
+                                                var flag=0;for (var k=0;k<blog.body[0].liked.length;k++){
+                                                if (blog.body[0].liked[k].name==currUser.username){
+                                                    flag=flag+1;
+                                                }
+                                            }}%>
+                                            <div style="height:20px;background-color: rgb(3, 39, 30);margin-top: 5px;font-size: small;">
+                                                <span style="float:right;padding-right:10px;"><%=blog.body[0].like%> likes</span>
+                                                <span class="reps" style="float:right;padding-right:10px;"><%=blog.body[0].reply.length%> comments</span>
+                                            </div>
+                                            <div style="margin-top: 10px;border-top: 0.5px solid black;padding-left: 5px;padding-right: 30px;display: flex;margin-top: 5px;">
+                                                 
+                                                <% if (flag==0){%>
+                                                <form  id="my_form"  style="flex: 50%;margin-bottom: 0px;margin-top: 5px;padding-right: 50px;" action="blogs/<%=blog._id %>/likes?_method=PUT" method="POST" > 
+                                                    
+                                                    <button name="like[name]" class="ui basic mini button green" style="padding: 7px;width:75px" ><i  class="thumbs up large  icon" style="padding-left: 5px;"></i><span style="color: white;padding-top: 20px;">Like</span></button>
+                                                </form>
+                                                <%}else{%>
+                                                    <form  id="my_form" style="flex: 50%;margin-bottom: 0px;margin-top: 5px;padding-right: 50px;"  method="POST" > 
+                                                    
+                                                        <button name="like[name]" class="ui basic mini blue disabled button " style="padding: 7px;width:75px" ><i  class="thumbs up large  icon" style="padding-left: 5px;"></i><span style="color: white;padding-top: 20px;">Like</span></button>
+                                                    </form>
+
+
+                                                    <%}%>
+                                                <a  href="blogs/<%=blog._id%>/reply" class="ui mini basic button  blue reply sama" ><i class="comment outline icon large"></i>Comment</a>
+                                            </div>
+                                           
+                                           
+                                        </div >
+                                       
+                                    </div>
+                                <%} }%>
+                                    
+                                
+                            </div>
+                            
+                            <div class="extra">
+                                <a class="ui basic mini violet button" href="/blogs/<%=blog._id %>">
+                                    Ans This?
+                                    
+                                </a>
+                                <a class="ui basic mini yellow  button " style="display: inline;" href="/blogs/<%=blog._id %>/view">
+                                    View Answers  (<%= blog.body.length%>)
+                                </a>
+                            </div>
+                        </div> 
+                    </div>
+                <% }}) %>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<%- include('partials/footer');%>

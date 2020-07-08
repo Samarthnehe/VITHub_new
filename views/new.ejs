@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>VITHub</title>
+        <link rel="stylesheet" type=" text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link rel="stylesheet" type=" text/css" href="/stylesheets/app.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='manifest' href='/manifest.json'>
+      
+    </head>
+    <body style="background-color: #24244e;height: 100%;position: fixed;top: 0;right: 0;left: 0;">
+        <div class="ui fixed inverted menu">
+        <div class="ui container" >
+                <div class="header item" ></i><a id="demo"><i class="bars large icon"></i></a></div>
+                
+               
+                <a href="/" class="item"><i class="Home small icon"></i>Home</a>
+                <a href="/answer" class="item"><i class="pencil alternate small icon"></i>Answer</a>
+                <a href="/blogs/new" class="item right but"><button class="ui basic blue button">Add Question</button></a>
+                <div class="item right heya"><div class="dropdown1">
+                    <button class="dropbtn1"><i class="user small icon"></i><span class="profile">Profile</span>
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content1">
+                      <div class="info">
+                        <a href="#"><i class="user circle small icon"></i><%= currUser.username %></a>
+                           
+                      </div>
+                      <a class="hi" href="/content">Your Content</a>
+                      <a class="hi" href="/logout">Logout</a>
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    
+
+
+<div class="ui main text container segment hey" style="margin-bottom: 0px;overflow-y: hidden;">
+    <div class="ui huge header" style="color: white;">Ask a Question</div>
+    <form class="ui form" action="/" method="POST">
+        
+        <div class="field">
+            <label>Title</label>
+            <textarea type="text" name="blog[title]" class="form1"  placeholder="Type your question here"></textarea>
+        </div>
+        <div class="field" style="width: 50%;margin: 0 auto;margin-bottom: 10px;">
+        <label>Genre</label>
+        <select name="blog[genre]" class="form1" required>
+            <option value="Academics">Academics</option>
+            <option value="Hostel">Hostel</option>
+            <option value="Mess">Mess</option>
+            <option value="RoomAllotment">Room Allotment</option>
+            <option value="Books">Books</option>
+            <option value="Project">Project</option>
+            <option value="Faculty">Faculty</option>
+            <option value="Subjects">Subjects</option>
+            <option value="FFCS">FFCS</option>
+            <option value="Transport">Transport</option>
+          </select>
+        </div>
+        <input class="ui green small inverted button" type="submit" value="Add Question">
+        <a href="/"><button  style=" float: right; display: inline;" class="ui blue small basic button">BACK</button></a>
+    </form>
+    
+
+</div>
+
+</body>
+</html>

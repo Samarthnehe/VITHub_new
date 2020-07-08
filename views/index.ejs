@@ -1,0 +1,62 @@
+<%- include('partials/header'); %>
+<div class="row" style="background-color: rgb(104, 101, 101) ;">
+    <div class="col heya" style="width:40%;height: auto;padding-left: 90px;padding-top: 165px;padding-right: 180px; border-right: black;position: fixed;top: 0;left: 0;">
+        <div style="background-color: rgb(0, 0, 0);padding-top:20px;padding-bottom: 20px;border: 0.1px solid rgb(255, 255, 255);border-radius: 15px;color: white;">
+        <div >
+            <h1 style="text-align: center;"><u>TOPICS</u></h1>
+        </div>
+        <div class="topics">
+            <div class="points">
+                <ul style="list-style-type:none;">
+                    <li><a><i class="pencil alternate small icon"></i>Academics</a></li>
+                    <li><a><i class="home small icon"></i>Hostel</a></li>
+                    <li><a><i class="Food small icon"></i>Mess</a></li>
+                    <li><a><i class="bed small icon"></i>Room Allotment</a></li>
+                    <li><a><i class="Book small icon"></i>Books</a></li>
+                    <li><a><i class="Text File small icon"></i>Projects</a></li>
+                    <li><a><i class="male small icon"></i>Faculty</a></li>
+                    <li><a><i class="clipboard outline small icon"></i>Subjects</a></li>
+                    <li><a><i class="Desktop small icon"></i>FFCS</a></li>
+                    <li><a><i class="car small icon"></i>Transport</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="col" style="width:60%;overflow: auto;margin-left: 40%;" >
+        
+        <div class="ui main text " style="padding-right: 70px;padding-left: 20px;">
+        <div class="ui huge header" style="margin-top: 100px;">Answered Posts</div>
+        <div class="ui top attached segment" style="background-color: rgb(104, 101, 101);border: 1px solid rgb(104, 101, 101);">
+            <div class="ui divided items">
+                <% blogs.forEach(function(blog){ if(blog.title!=null && blog.body!=null) {%>
+                    <div class="item sam">
+                        <div class="image1">
+                            <img src="<%=blog.image%>" width="150px" height="120px" style="margin: 5px;border: 0.8px solid rgb(255, 255, 255);margin-top: 30%;">
+                        </div>
+                        <div class="content" style="color: white;">
+                            <div class="meta" style="margin: 10px;">
+                                <span><span style="font-size:small;color: rgb(252, 255, 102);"><%= infos[0].name %></span><span style="color: white;font-size: small;">- <%= blog.created.toDateString() %></span></span>
+                            </div>
+                            <a class="header" href="/blogs/<%= blog._id %>" style="color: rgb(16, 188, 240);margin-top: 5px;margin-bottom: 10px;"><%= blog.title %></a>
+                            
+                            <div classs="description">
+                                <p><%= blog.body%></p>
+                            </div>
+                            <div class="extra">
+                                <a class="ui  basic mini violet button" href="/blogs/<%=blog._id %>">
+                                    Ans This?
+                                    <i class="right small chevron icon"></i>
+                                </a>
+                            </div>
+                        </div> 
+                    </div>
+                <% }}) %>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<%- include('partials/footer');%>

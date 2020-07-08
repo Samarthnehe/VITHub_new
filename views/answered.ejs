@@ -1,0 +1,68 @@
+<%- include('partials/header'); %>
+
+    <div class="col heya" >
+        <div class="hey1">
+        <div class="top">
+            <h1 style="text-align: center;"><u>CONTENTS</u></h1>
+        </div>
+        <div class="topics">
+            <div class="points">
+                <ul style="list-style-type:none;">
+                    <li><a href="/content">Questions asked</a></li>
+                    <li><a href="/content/ans">Answers</a></li>
+                    
+                   
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="col hi"  >
+        
+        <div class="ui main text " >
+        <div class="ui huge header heya" >Answered Posts</div>
+        <div class="ui top attached segment" style="background-color: #24244e;border: 1px solid #24244e;">
+            <div class="ui items">
+                <% blogs.forEach(function(blog){ 
+                    %>
+                    <% var flag=0;for(var i=0;i<blog.body.length;i++){ if(blog.body[i].ans!="" && blog.body[i].name==currUser.username){
+                        flag=flag+1;}}
+                        console.log(flag);
+                        if( flag!=0){
+                            for(var j=0;j<blog.body.length;j++){if(blog.body[j].ans!="" && blog.body[j].name==currUser.username){
+                        
+                        %>
+                    <div class="item sam">
+                        
+                        <div class="content" style="color: white;">
+                            
+                           
+                                <div style="background-color: rgb(0, 0, 0);padding-top: 10px;padding-bottom: 10px;padding-right: 20px;margin-top: 10px;margin-bottom: 0px;border-radius: 10px;padding-left: 20px;">
+                                    <div style="margin-bottom: 10px;">
+                                    <div style="font-size:medium">
+                                        <span style="padding-bottom: 10px;"><%= blog.title%></span>
+                                    </div>
+                                </div>
+                            <a class="header" href="/blogs/<%= blog._id %>" style="color: rgb(16, 188, 240);margin-top: 20px;margin-bottom: 10px;"><%= blog.body[j].ans %></a>
+                               </div>
+                            
+                            <div class="extra">
+                                <a class="ui  basic mini yellow button" href="/ %>">
+                                    BACK
+                                    <i class="left small chevron icon"></i>
+                                </a>
+                            </div>
+                            
+                        </div> 
+                        
+                    </div>
+                    <%}}}%>
+                    
+                <% }) %>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<%- include('partials/footer');%>
+

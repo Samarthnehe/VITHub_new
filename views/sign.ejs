@@ -1,0 +1,40 @@
+<%- include('partials/header1'); %>
+<div class="ui main text container segment" style="margin-top:7em;width: 400px;background-color: black;">
+    <div style="text-align: center;color: white;" class="ui header">SIGN UP</div>
+    <form class="ui form" action="/signin" method="POST">
+        <div class="field">
+            <label>Username</label>
+            <input type="text" name="username" class="form1" placeholder="Username">
+        </div>
+        <div class="field">
+            <label>Email</label>
+            <input type="text"  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" class="form1" placeholder="Email">
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" class="form1" placeholder="Password" id="pass">
+            <div id="meter_wrapper">
+                <div id="meter"></div>
+               </div>
+               <span id="pass_type" style="color: white;"></span>
+        </div>
+        <div class="field">
+            <label>Phone</label>
+            <input type="text" minlength=10 class="form1" placeholder="Phone Number">
+        </div>
+                
+    <div style="padding-left: 130px;">
+        <input class="ui inverted purple small button" type="submit">
+    </div>
+    <div style="padding-top: 10px;padding-bottom: 30px;" >
+        <button class="ui basic blue small button" style="float: right;" ><a href="/">BACK</a></button>
+    </div>
+</form>
+
+</div>
+<div style="bottom: 30;right: 43%; position: fixed;">
+    <p class="love">Made with <i class="icon red small heart"></i> by Samarth Nehe</p>
+</div>
+
+
+<%- include('partials/footer1'); %>

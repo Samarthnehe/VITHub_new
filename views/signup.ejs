@@ -1,0 +1,32 @@
+<%- include('partials/header1'); %>
+<div class="ui main text container segment" style="margin-top:7em;background-color: black;border-radius: 10px;border: 1px solid white;width: 500px;overflow: hidden;margin-bottom: 10px;padding-right: 10px;padding-left: 10px;padding-right: 40px;padding-left: 40px;">
+    <div style="text-align: center;color: white;" class="ui header">LOGIN</div>
+    <form class="ui form" action="/login" method="POST">
+        <div class="field">
+            <label>Username</label>
+            <input type="text" name="username"  class="form1" placeholder="Username" required>
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" class="form1"  placeholder="Password" required>
+        </div>
+                
+    <div style="padding-left: 170px;">
+        <button class="ui inverted blue small button">LOGIN</button>
+    </div>
+    
+</form>
+<div style="padding-top: 20px;" >
+    <h3 class="block" style="color: white;font-size: small;">New to VITHub?</h3>
+    <a href="/sign" class="block chain" style="float: right;">Sign Up</a>
+</div>
+</div>
+<div style="background-color: white;margin-right: 200px;margin-left: 200px;border: 2px solid black;margin-top: 80px;height: auto;">
+    <div style="margin-left: 30px;margin-right: 30px;color: black;text-align: center;padding-top: 20px;padding-bottom: 20px;">
+        <h1>ABOUT <span style="color: red;font-size: xx-large;">VITHub</span></h1>
+        <p style="font-weight:bold ;font-size: medium;">VITHub is a question-and-answer website, especially for VITians, where questions related to topics like Academics,Hostel-life,Subjects and Projects can be asked and answered by other VITians!</p>
+        <p style="font-weight:bold ;font-size: medium;">This forum enables students to put their questions on board and have the assurity of getting it answered!</p>
+    </div>
+</div>
+
+<%- include('partials/footer1'); %>

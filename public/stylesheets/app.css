@@ -1,0 +1,488 @@
+.ui.form input.form1::placeholder{
+  color: black;
+}
+.ui.form textarea.form1::placeholder{
+  color: black;
+}
+.ui.form input.form1:focus{
+  box-shadow: 0 0 3px rgb(127, 229, 255);
+  
+  border: 1px solid rgba(68, 211, 247,1);
+}
+.dropdown1 {
+ 
+  overflow: hidden;
+}
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 5px 8px 5px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content1 a.hi {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: 0.1px solid rgb(180, 180, 180);
+}
+.dropdown-content1 .info {
+  float: none;
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: 0.1px solid rgb(180, 180, 180);
+}
+.dropdown-content1 .info a {
+  float: none;
+  color: black;
+  padding: 6px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  
+}
+.dropdown1 .dropbtn1 {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0px 6px;
+  background-color: inherit;
+  font-family: inherit; 
+  margin: 0; 
+}
+.dropdown1:hover .dropdown-content1 {
+  display: block;
+}
+.ui.menu .item a.logo:hover{
+  color: rgb(12, 170, 233);
+}
+i.icon{
+  font-size: 2em;
+  padding-right: 20px;
+}
+.ui.items .item .extra{
+padding-left: 15px;
+}
+.block{
+  display: inline;
+}
+.ui.huge.header{
+margin-top: 10px;
+}
+.ui.huge.header.heya{
+margin-top: 100px;
+}
+
+.chain:hover{
+  color: red;
+}
+.dropdown1{
+  float: right;
+}
+#meter_wrapper
+{
+border:0.5px solid rgb(126, 122, 122);
+margin-left:25%;
+margin-top:10px;
+width:150px;
+height:19px;
+border-radius:1px;
+}
+#meter
+{
+width:0px;
+height:17px;
+
+
+}
+.item.sam button.reply{
+  display: inline;float: right;color: yellow;flex: 50%;margin-left: 500px;margin-right: 150px;
+}
+.item.sam a.reply:hover{
+  color: red;
+}
+#pass_type
+{
+font-size:12px;
+margin-top:10px;
+margin-left:38%;
+text-align:center;
+color:rgb(0, 0, 0);
+}
+.row{
+
+  display: flex;
+  min-height: 633px;
+}
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+.rep{
+  visibility: hidden;
+  animation: fadeOut 1s linear;
+  height: 0;
+}
+.myreply{
+  padding: 8px 0px 8px 0px;
+  margin-top: 5px;
+  height: auto;
+  visibility: visible;
+  
+  animation: fadeIn 1s linear;
+  
+}
+.ui.items a.sama{
+  padding: 1px;width: 150px;height: 30px;margin-top: 3px;margin-left: 200px;padding-top: 8px;
+}
+.ui.form a.sama{
+  padding: 1px;width: 150px;height: 30px;margin-top: 3px;margin-left: 200px;padding-top: 8px;
+}
+.col1{
+  width:60%;overflow: auto;margin-left: 20%;margin-right: 30%;
+}
+.col.hi{
+width:60%;overflow: auto;margin-left: 40%;min-height: 580px;
+}
+.points{
+  margin: 5px;
+}
+.points ul li{
+  margin: 15px;
+  font-size: medium;
+  
+}
+.points ul li a:hover{
+  color: rgb(16, 188, 240);
+  
+}
+
+.ui.items .item.sam{
+  margin-bottom: 20px;
+  background-color: black;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  border: 0.1px solid rgb(0, 0, 0);
+}
+.ui.main.container{
+margin-top:7em;background-color: black;border-radius: 10px;border: 1px solid rgb(0, 0, 0);width: 500px;overflow: hidden;margin-bottom: 275px;padding-right: 10px;padding-left: 10px;
+}
+.ui.main.text{
+padding-right: 40px;padding-left: 40px;
+
+}
+.ui.form .field label{
+color: white;
+}
+.rows{
+display: flex;
+background-color: black;padding-top: 20px;border-top: 1px solid rgb(0, 0, 0);
+}
+.heya1{
+  left: 0;
+}
+
+.cols{
+flex: 50%;
+}
+ul.demo li{
+display: inline;
+}
+.item.right.heya a:hover{
+  color: rgb(15, 161, 219);
+}
+.col.heya{
+width:40%;
+height: auto;padding-left: 90px;padding-top: 165px;padding-right: 180px; border-right: black;position: fixed;top: 0;left: 0;
+}
+.hey1{
+background-color: rgb(0, 0, 0);padding-top:20px;padding-bottom: 20px;border: 0.1px solid rgb(0, 0, 0);border-radius: 15px;color: white;
+}
+div.tooltip:hover span.tooltiptext{
+visibility: visible;
+}
+
+@media screen and (max-width: 800px) {
+.col.heya{
+  width:1%;
+  padding-left: 0px;padding-top: 45px;padding-right: 0px; border-right: black;position: fixed;top: 0;left: 0;z-index: 9;transition: 0.3s;left: -300px;
+  
+}
+.col1{
+  width:87%;overflow: auto;margin-left: 10%;padding-right: 10px;
+}
+footer{
+  font-size: x-small;
+}
+footer h3{
+  font-size: small;
+}
+.demo i.icon{
+  font-size: small;
+}
+.item.sam .meta a.reply:hover{
+  color: red;
+}
+.item.sam button.reply{
+  display: inline;float: right;color: yellow;flex: 50%;margin-left: 40px;margin-right: 10px;
+}
+.ui.form a.reply{
+  display: inline;float: right;color: yellow;flex: 50%;padding-left: 70px;
+}
+.hey1{
+  background-color: rgb(0, 0, 0);height:81% ;padding-top:110px;padding-bottom: 150px;border: 0.1px solid rgb(0, 0, 0);border-radius: 15px;color: white;
+  margin-right: 10px;width: 300px;border-radius: 0px;box-shadow:8px 8px rgba(0,0,0,0.5);opacity: 0.9;
+  
+}
+.hey1 .points{
+  padding-left: 65px;
+}
+.top h1{
+  font-size: x-large;
+}
+.list{
+  padding-right: 10px;
+}
+.points ul li{
+  margin: 15px 10px 15px -10px;
+  width: 150px;
+
+}
+.mystyle {
+  left: 0;
+}
+/* defining an animation '@keyframes', naming the animation 'fadeIn': */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+.rep{
+  visibility: hidden;
+  animation: fadeOut 1s linear;
+  height: 0;
+}
+.myreply{
+  padding: 8px 0px 8px 0px;
+  margin-top: 5px;
+  height: auto;
+  visibility: visible;
+  
+  animation: fadeIn 1s linear;
+  
+}
+
+.ui.items a.sama{
+  padding: 1px;width: 50px;height: 30px;margin-top: 5px;margin-left: 45px;padding-top: 8px;
+}
+.ui.form a.sama{
+  padding: 1px;width: 50px;height: 30px;margin-top: 3px;margin-left: 45px;padding-top: 8px;
+}
+.item.right.heya a:hover{
+  color: rgb(11, 139, 224);
+}
+.col.hi{
+  
+  width:99%;overflow: auto;margin-left: 1%;padding-right: 5px;min-height: 633px;
+}
+.ui.main.container{
+  margin-top:7em;background-color: black;border-radius: 10px;border: 0.5px solid rgb(0, 0, 0);
+}
+.ui.main.text{
+  padding-right: 10px;padding-left: 10px;
+  overflow-x: hidden;
+  
+}
+.ui.main.text.hey{
+  padding-right: 20px;padding-left: 20px;
+  overflow-x: hidden;
+  
+}
+.ui.form .field label{
+  color: white;
+}
+.ui.huge.header{
+  margin-top: 20px;
+}
+.ui.huge.header.heya{
+  margin-top: 30px;
+}
+
+.ui.items .item.sam{
+  margin-bottom: 20px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  border: 0.1px solid rgb(0, 0, 0);
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);
+
+}
+.ui.button.basic.mini{
+  width: 85px;
+  
+}
+.ui.top.segment{
+  padding-right: 0px;
+  padding-left: 0px;
+  
+}
+.item.sam{
+  padding-left: 2px;
+  padding-right: 2px;
+  
+}
+.ui.container{
+  width: 100%;
+}
+.cols p,h3{
+  margin-bottom: 0px;
+}
+.col.heya:hover{
+  left: 0;
+}
+.header.item{
+  width:14%;
+  padding-right: 5px;
+}
+.header.item a{
+  font-size: small;
+}
+i.icon{
+  padding-right: 5px;
+}
+
+.ui.items .item .extra{
+padding-left: 1px;
+}
+.extra a.ui.basic.mini.yellow.button{
+padding-left: 9px;
+padding-right: 9px;
+}
+
+.item{
+  width: 67.4px;
+  font-size: x-small;
+}
+.item.right.heya{
+  margin-right: 20px;
+  margin-left: 20px;
+ width: 83px;
+}
+
+.row{
+
+  display: flex;
+  min-height: 633px;
+}
+.rows{
+  display: flex;
+  background-color: black;padding-top: 10px;border-top: 1px solid rgb(0, 0, 0);
+
+
+}
+.rows h3{
+font-size: small;
+}
+.cols{
+  flex: 50%;
+}
+ul.demo li{
+  display: inline;
+}
+
+.col.heya.mystyle {
+  left: 0;
+}
+.item.right.but{
+  width: 83px;
+}
+.dropdown1{
+  font-size: x-small;
+}
+.profile{
+  font-size: x-small;
+}
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 400px;
+  box-shadow: 0px 3px 3px 5px rgba(0,0,0,0.2);
+  margin-right: 10px;
+  z-index: 1;
+  
+}
+.dropdown-content1 a.hi {
+  float: none;
+  color: black;
+  padding: 8px 8px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: 0.5px solid rgb(180, 180, 180);
+}
+.dropdown-content1 .info {
+  float: none;
+  color: black;
+  padding: 1px 8px 1px 0px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: 0.5px solid rgb(180, 180, 180);
+}
+.dropdown-content1 .info a {
+  float: none;
+  color: black;
+  padding: 3px 3px 5px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  
+}
+.dropdown1 .dropbtn1 {
+  font-size: 10px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0px 6px;
+  background-color: inherit;
+  font-family: inherit; 
+  margin: 0; 
+
+}
+}
